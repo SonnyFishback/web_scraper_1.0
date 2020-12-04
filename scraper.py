@@ -13,7 +13,7 @@ stocks = soup.select(".cwl-symbols tbody tr")
 stock_data_array = []
 # Variable to keep track of which index is being accessed.
 stock_index_count = 0
-# Loop through stocks and store data in stock_data_array.
+# Loop through stocks.
 for stock in stocks:
     stock_details_dictionary = dict()
     
@@ -28,12 +28,12 @@ for stock in stocks:
     # stock_details_dictionary["stock_details_link_route"] = stock.select_one(".data-col0 a"["href"]
     # stock_details_dictionary["stock_details_link"] = f"https://ca.finance.yahoo.com{stock_details_dictionary["stock_details_link_route"]}"
     
+    # Store data in stock_data_array.
     stock_data_array.append(stock_details_dictionary)
+    # Print results of each loop.
     print(stock_data_array[stock_index_count])
+    # Add 1 to the index count
     stock_index_count += 1
-
-
-
 
 
 
